@@ -1,0 +1,16 @@
+version: '3'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./my_django_app:/app
+      - my_django_app_db:/app/db.sqlite3  # Mount the SQLite database file
+    environment:
+      - DJANGO_SETTINGS_MODULE=sweeft_digital.settings
+
+volumes:
+  my_django_app_db:  # Define a named volume for the SQLite database file
