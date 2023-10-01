@@ -20,6 +20,8 @@ Include your API key in the header of your requests as follows:
 
 ## Endpoints
 
+if you want to reach swagger endpoint use command http://127.0.0.1:8000/swagger/
+
 ### User Management
 
 #### Register a User
